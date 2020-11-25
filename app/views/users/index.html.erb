@@ -1,2 +1,12 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1>ユーザー登録・ログイン</h1>
+
+<% if flash[:info] %>
+  <font color="green"><%= flash[:info] %></font>
+<% end %>
+
+<hr>
+
+<%= link_to '新規登録', new_user_path %>
+<p><%= link_to 'ログイン', top_login_form_path %></p>
+
+
