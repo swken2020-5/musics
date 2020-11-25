@@ -1,2 +1,19 @@
-<h1>Tweets#index</h1>
-<p>Find me in app/views/tweets/index.html.erb</p>
+<% if (flash[:notice]) %>
+    <%= flash[:notice]%>
+    <br />
+<% end %>
+<%= link_to '作成', '/tweets/new' %>
+<hr />
+<% @tweet.each do |tweet| %>
+    <%= tweet.message %>
+    <br />
+    <% zikan = Time.current.to_i - tweet.tdate.to_i %>
+    <% zikan = zikan / 60 %>
+    <%= "#{zikan}分" %>
+    <br />
+    <%= link_to '表示', "/tweets/#{tweet.id}" %>
+    <%= link_to '編集', "/tweets/#{tweet.id}/edit" %>
+    <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
+    <br />
+    <br />
+<% end %>
