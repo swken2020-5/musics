@@ -28,4 +28,13 @@ class TweetsController < ApplicationController
   def edit
     @tweet = Tweet.find(params[:id])
   end
+  def update
+    @tweet = Tweet.find(params[:id])
+    if !@tweet.update(message: params[:tweet][:message]) then
+      render 'edit'
+      return
+    end
+    flash[:notice] = '更新しました'
+    redirect_to '/'
+  end
 end 
