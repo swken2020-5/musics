@@ -4,12 +4,10 @@
 <% end %>
 <%= link_to '作成', '/tweets/new' %>
 <hr />
-<% @tweet.each do |tweet| %>
+<% @tweets.each do |tweet| %>
     <%= tweet.message %>
     <br />
-    <% zikan = Time.current.to_i - tweet.tdate.to_i %>
-    <% zikan = zikan / 60 %>
-    <%= "#{zikan}分" %>
+    
     <br />
     <%= link_to '表示', "/tweets/#{tweet.id}" %>
     <%= link_to '編集', "/tweets/#{tweet.id}/edit" %>

@@ -1,8 +1,6 @@
 <%= @tweet.message %>
 <br />
-<% zikan = Time.current.to_i - @tweet.tdate.to_i %>
-<% zikan = zikan / 60 %>
-<%= "#{zikan}分" %>
+
 <br />
 <br />
 <%= link_to '戻る', '/' %>
