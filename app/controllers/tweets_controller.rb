@@ -14,13 +14,13 @@ class TweetsController < ApplicationController
       return
     end
     flash[:notice] = 'ツイートしました'
-    redirect_to '/'
+    redirect_to tweets_path
   end
   def destroy
     tweet = Tweet.find(params[:id])
     tweet.destroy
     flash[:notice] = '削除しました'
-    redirect_to '/'
+    redirect_to tweets_path
   end
   def show
     @tweet = Tweet.find(params[:id])
@@ -36,6 +36,6 @@ class TweetsController < ApplicationController
       return
     end
     flash[:notice] = '更新しました'
-    redirect_to '/'
+    redirect_to tweets_path
   end
 end
