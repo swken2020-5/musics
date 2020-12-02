@@ -6,7 +6,7 @@ class TopController < ApplicationController
   def login
     if User.authenticate(params[:uid], params[:pass])
       session[:login_uid] = params[:uid]
-      redirect_to root_path
+      redirect_to tweets_path
     else
       render :error
     end
