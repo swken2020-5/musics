@@ -6,24 +6,24 @@
   
 <%= link_to '作成', '/tweets/new' %>
 <hr />
-<% @tweets.each do |t| %>
+<% @tweets.each do |tweet| %>
+    <%= tweet.message %>
+    
     <div class="tweet">
       
-　　　　<audio src= "<%= "#{t.file}" %>" controls="">
-         <a src="<%= "#{t.file}" %>">ダウンロード</a>
+　　　　<audio src= "<%= "#{tweet.file}" %>" controls="">
+         <a src="<%= "#{tweet.file}" %>">ダウンロード</a>
        </audio>
 　　　 
     </div>
-<% end %>
-  
-<% @tweets.each do |tweet| %>
-    <%= tweet.message %>
+
     <br />
    
     <br />
+
     
     <br />
-    <%= link_to '表示', "/tweets/#{tweet.id}/show" %>
+    <%= link_to '表示', "/tweets/#{tweet.id}" %>
     <%= link_to '編集', "/tweets/#{tweet.id}/edit" %>
     <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
     <br />

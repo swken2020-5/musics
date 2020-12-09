@@ -7,22 +7,20 @@
                 </li>
             <% end %>
         </ul>
-   <% end %>
-<br />
-    
- <% end %>
-<br />
-<%= form_for @tweet do |f| %>
-　
-  <%= f.label :file %>
-  <%= f.file_field :file , :size => 140 %>
-　
-  <%= f.submit "送信" %>
+  <% end %>
   
+  <%= tweet.label :file %>
+  <%= tweet.file_field :file , :size => 140 %>
+
+<br />
+    <%= tweet.text_area :message %>
+    <%= tweet.submit 'ツイート' %>
+    <br />
+    <%= link_to '戻る', tweets_path %>
 <% end %>
 
 
-<hr>
+<hr />
 
 <html>
 <head>
