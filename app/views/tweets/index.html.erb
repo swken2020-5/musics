@@ -19,9 +19,11 @@
 <% @tweets.each do |tweet| %>
     <%= tweet.message %>
     <br />
+   
+    <br />
     
     <br />
-    <%= link_to '表示', "/tweets/#{tweet.id}" %>
+    <%= link_to '表示', "/tweets/#{tweet.id}/show" %>
     <%= link_to '編集', "/tweets/#{tweet.id}/edit" %>
     <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
     <br />

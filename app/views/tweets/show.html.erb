@@ -1,6 +1,9 @@
 <%= @tweet.message %>
 <br />
+ <%= tweet.text_area :message %>
+    <%= tweet.submit 'ツイート' %>
+    
+
 
 <br />
 <br />
-<%= link_to '戻る', tweets_path %>

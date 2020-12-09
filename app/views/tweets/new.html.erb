@@ -7,14 +7,10 @@
                 </li>
             <% end %>
         </ul>
-    <% end %>
-
-
-    <%= tweet.text_area :message %>
-    <%= tweet.submit 'ツイート' %>
+   <% end %>
 <br />
     
-<% end %>
+ <% end %>
 <br />
 <%= form_for @tweet do |f| %>
 　
@@ -22,19 +18,9 @@
   <%= f.file_field :file , :size => 140 %>
 　
   <%= f.submit "送信" %>
-<<<<<<< HEAD
-  <br />
-  <%= link_to '戻る', tweets_path %>
-<% end %>
-=======
   
 <% end %>
-<br />
-    <%= tweet.text_area :message %>
-    <%= tweet.submit 'ツイート' %>
-    <br />
-    <%= link_to '戻る', tweets_path %>
-<% end %>
+
 
 <hr>
 
@@ -42,7 +28,7 @@
 <head>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="p-3">
+ <body class="p-3">
     <h1 class="mb-3">曲名思い出せんなら歌ってみ～</h1>
     <div id="app">
         <!-- ③ 録音の開始／終了ボタンを設置する部分 -->
@@ -110,6 +96,6 @@
         });
 
     </script>
-</body>
+ </body>
 </html>
->>>>>>> 5955c5c4f9a782be664681a9cada477cd4dbf51a
+
