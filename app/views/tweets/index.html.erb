@@ -2,8 +2,20 @@
     <%= flash[:notice]%>
     <br />
 <% end %>
+
+  
 <%= link_to '作成', '/tweets/new' %>
 <hr />
+<% @tweets.each do |t| %>
+    <div class="tweet">
+      
+　　　　<audio src= "<%= "#{t.file}" %>" controls="">
+         <a src="<%= "#{t.file}" %>">ダウンロード</a>
+       </audio>
+　　　 
+    </div>
+<% end %>
+  
 <% @tweets.each do |tweet| %>
     <%= tweet.message %>
     <br />
@@ -14,4 +26,8 @@
     <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
     <br />
     <br />
+    <%= link_to '戻る', '/' %>
+    <br />
 <% end %>
+
+ 

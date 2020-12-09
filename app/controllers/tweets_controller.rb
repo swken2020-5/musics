@@ -39,3 +39,8 @@ class TweetsController < ApplicationController
     redirect_to tweets_path
   end
 end
+  private
+  def tweet_params
+  　params.require(:tweet).permit(:body,:file) 
+　end
+  end

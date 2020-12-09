@@ -1,3 +1,6 @@
 class Tweet < ApplicationRecord
-  validates :message, presence: true, length: {minimum: 1, maximum: 140} 
+# ここから追記
+  mount_uploader :file, AudiofileUploader
+# ここまで追記
+  
 end
