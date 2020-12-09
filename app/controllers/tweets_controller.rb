@@ -37,13 +37,9 @@ class TweetsController < ApplicationController
     flash[:notice] = '更新しました'
     redirect_to tweets_path
   end
-<<<<<<< HEAD
-end 
-=======
 end
   private
   def tweet_params
   　params.require(:tweet).permit(:body,:file) 
 　end
   end
->>>>>>> b4899f8efc332ff5c51dd2d579427b47d98b42d6
