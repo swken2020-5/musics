@@ -37,6 +37,11 @@ class TweetsController < ApplicationController
     flash[:notice] = '更新しました'
     redirect_to tweets_path
   end
+  
+  def get_image
+        image = Image.find(params[:id])
+        send_data image.file, disposition: :inline, type: 'audio/webm'
+  end
 end
   private
   def tweet_params
