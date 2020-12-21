@@ -10,9 +10,10 @@
     <% end %>
 　
     <%= tweet.label :file %>
-    <%= tweet.file_field :file , :size => 140 %>
+    <%= tweet.file_field :file %>
     
 <br />
+    <%= tweet.label :message, 'メッセージ' %>
     <%= tweet.text_area :message %>
     <%= tweet.submit 'ツイート' %>
     <br />

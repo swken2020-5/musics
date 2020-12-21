@@ -7,15 +7,16 @@
 <%= link_to '作成', '/tweets/new' %>
 <hr />
 <% @tweets.each do |tweet| %>
+ 
     <%= tweet.message %>
     
-    <div class="tweet">
-      
-　　　　<audio src= "<%= "#{tweet.file}" %>" controls="">
-         <a src="<%= "#{tweet.file}" %>">ダウンロード</a>
-       </audio>
-　　　 
-    </div>
+<div class="tweet">
+    <audio src= "<%= "get_audio/#{tweet.id}" %>" controls="">
+        <a src= "<%= "get_audio/#{tweet.id}" %>"></a>
+    </audio>
+</div>
+    
+   
 
   
 

@@ -10,14 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_09_051359) do
+ActiveRecord::Schema.define(version: 2020_12_16_130931) do
+
+  create_table "audios", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "tweets", force: :cascade do |t|
     t.string "message"
-    t.integer "user_id"
+    t.binary "file"
+    t.datetime "tdate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "file"
   end
 
   create_table "users", force: :cascade do |t|
