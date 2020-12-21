@@ -46,22 +46,11 @@ class TweetsController < ApplicationController
     redirect_to tweets_path
   end
   
-<<<<<<< HEAD
+
   def get_audio
 　  @tweet = Tweet.find(params[:id])
-　  send_file @tweet.file, type: 'audio/mpeg'
-=======
-  def get_image
-        image = Image.find(params[:id])
-        send_data image.file, disposition: :inline, type: 'audio/webm'
-  end
-end
-  private
-  def tweet_params
-  　params.require(:tweet).permit(:body,:file) 
-　end
->>>>>>> 1a1dd0d104173b2c9fe926fdd4bd5179982dd988
-  end
+　  send_file @tweet.file, type: 'video/webm'
+  end 
   
 end 
 
