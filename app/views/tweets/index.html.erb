@@ -10,6 +10,7 @@
  
     <%= tweet.message %>
     
+<<<<<<< HEAD
 <div class="tweet">
     <audio src= "<%= "get_audio/#{tweet.id}" %>" controls="">
         <a src= "<%= "get_audio/#{tweet.id}" %>"></a>
@@ -17,10 +18,20 @@
 </div>
     
    
+=======
+    <div class="tweet">
+      
+　　　　<audio audio/webm= "<%= "#{tweet.file}" %>" controls="">
+         <a audio/webm="<%= "#{tweet.file}" %>">ダウンロード</a>
+       </audio>
+　　　 
+    </div>
+>>>>>>> 1a1dd0d104173b2c9fe926fdd4bd5179982dd988
 
-  
+    <br />
+   
+    <br />
 
-    
     
     <br />
     <%= link_to '表示', "/tweets/#{tweet.id}" %>

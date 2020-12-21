@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   post 'top/login'
   get 'top/logout'
   get 'tweets/index'
+<<<<<<< HEAD
   get 'get_audio/:id', to: 'tweets#get_audio'
+=======
+>>>>>>> 1a1dd0d104173b2c9fe926fdd4bd5179982dd988
   
   resources :tweets
   resources :users
